@@ -7,21 +7,32 @@ let isStudent: boolean
 let hobbies: number[]
 let role: [number, string]
 
-type Person = {
+// type Person = {
+//   name: string,
+//   age?: number
+// }
+
+// let person: Person = {
+//   name: "Dan",
+// }
+
+// let manyPeople: Person[]
+
+// let printName: (name: string) => void
+
+// name = "Dan"
+// age = ""
+
+interface Person {
   name: string,
   age?: number
 }
 
-let person: Person = {
-  name: "Dan",
+interface Guy extends Person {
+  profession: string
 }
 
-let manyPeople: Person[]
 
-let printName: (name: string) => void
-
-name = "Dan"
-age = ""
 
 function App() {
   return (

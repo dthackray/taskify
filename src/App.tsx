@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 let name: string
-let age: number
+let age: number | string
 let isStudent: boolean
 let hobbies: number[]
 let role: [number, string]
@@ -18,8 +18,10 @@ let person: Person = {
 
 let manyPeople: Person[]
 
+let printName: (name: string) => void
+
 name = "Dan"
-age = 32
+age = ""
 
 function App() {
   return (

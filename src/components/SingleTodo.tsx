@@ -22,12 +22,17 @@ const SingleTodo = ({ todo, todos, setTodos }: Props) => {
 
   return (
     <form className="todos__single">
+      {todo.isDone ? (
+        <s className="todos__single--text">{todo.todo}</s>
+      ) : (
         <span className="todos__single--text">{todo.todo}</span>
-        <div>
-            <span className="icon"><AiFillEdit /></span>
-            <span className="icon"><AiFillDelete /></span>
-            <span className="icon" onClick={() => handleDone(todo.id)}><MdDone /></span>
-        </div>
+      )}
+      
+      <div>
+        <span className="icon"><AiFillEdit /></span>
+        <span className="icon"><AiFillDelete /></span>
+        <span className="icon" onClick={() => handleDone(todo.id)}><MdDone /></span>
+      </div>
     </form>
   )
 }
